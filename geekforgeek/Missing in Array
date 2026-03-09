@@ -1,0 +1,13 @@
+class Solution {
+    int missingNum(int arr[]) {
+
+        long n = arr.length + 1;
+        long total = (n * (n + 1)) / 2;
+
+        for(long num : arr){
+            total -= num;
+        }
+
+        return (int)total;
+    }
+}
